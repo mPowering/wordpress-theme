@@ -231,7 +231,7 @@ $total_sliders = count($sliders);
     <div class="container">
     <div class="row">
     <div class="col-sm-6">
-        <p class="star-title">Latest <span>Resources</span></p>
+        <p class="star-title">Latest Resources</p>
             <div class="latest-resource">
                 <?php
                 $queryObject = new WP_Query( 'post_type=press-releases&posts_per_page=1' );
@@ -254,7 +254,7 @@ $total_sliders = count($sliders);
         </div>
     </div>
     <div class="col-sm-6">
-        <p class="star-title">Latest <span>Blogs</span></p>
+        <p class="star-title">Latest Blogs</p>
      <ul class="latest-blogs">
     <?php $the_query = new WP_Query( 'showposts=4' ); ?>
 
@@ -379,8 +379,8 @@ $total_sliders = count($sliders);
     <div class="container">
     <div class="row">
     <div class="col-sm-12">
-    <span class="circle-title">PARTNER <span class="small">WITH US</span></span>
-    <p>SIGN UP TO BECOME A mPowering INSIDER</p>
+    <span class="circle-title">CONNECT</span>
+    <p>Sign up for news from mPowering</p>
     <?php echo do_shortcode( '[contact-form-7 id="107" title="newsletter"]' ); ?>
     </div>
     <div class="col-sm-12">

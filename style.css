@@ -108,6 +108,7 @@ h1 a:hover{
 h2{
     color: #ef485b;
     font-size: 150%;
+    font-weight:normal;
 }
 
 h2 a:hover{
@@ -1942,11 +1943,11 @@ ul#menu-company-menu li:before{
     background: none repeat scroll 0 0 #ff455a;
     border-radius: 100%;
     color: #fff;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: normal;
     height: 138px;
     margin: auto;
-    padding-top: 35px;
+    padding-top: 30px;
     text-align: center;
     width: 138px;
 }
