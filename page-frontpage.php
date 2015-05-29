@@ -159,9 +159,8 @@ $total_sliders = count($sliders);
                     while ($queryObject->have_posts()) {
                         $queryObject->the_post();
                         ?>
-                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <h2><a href="<?php the_field('file'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
                         <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
-                        <span class="more-link"><a href="<?php the_permalink(); ?>">[ More ]</a></span>
                     <?php
                     }
                     ?>
