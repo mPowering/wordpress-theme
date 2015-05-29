@@ -29,7 +29,7 @@ get_header(); ?>
                         ?>
                         <div class="col-sm-6">
                             <div class="col-sm-10 center partner" style="margin: auto; float: none;">
-                                <div class="member"><?php the_post_thumbnail('medium'); ?></div>
+                                <a href="<?php echo get_post_meta($queryObject->post->ID,	'link', true) ?>"><div class="member"><?php the_post_thumbnail('medium'); ?></div></a>
                             <div class="more-less">
                             	<div class="more-block" style="height: 80px; overflow: hidden;">
                                   <?php the_content(); ?>
@@ -51,15 +51,15 @@ $(function(){
 // The height of the content block when it's not expanded
 var adjustheight = 95;
 // The "more" link text
-var moreText = "Read More";
+var moreText = "[ More ]";
 // The "less" link text
-var lessText = "See Less";
+var lessText = "[ Less ]";
 
 // Sets the .more-block div to the specified height and hides any content that overflows
 $(".more-less .more-block").css('height', adjustheight).css('overflow', 'hidden');
 
 // The section added to the bottom of the "more-less" div
-$(".more-less").append('<p class="continued">[&hellip;]</p><span class="button-content"><a href="#" class="adjust more"></a></span>');
+$(".more-less").append('<span class="button-content"><a href="#" class="adjust more"></a></span>');
 
 $("a.adjust").text(moreText);
 

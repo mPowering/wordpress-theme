@@ -2285,15 +2285,13 @@ pre {
 }
 
 #partner-content .partner {
-    margin-bottom: 70px !important;
+    margin-bottom: 30px !important;
     position: relative;
 }
 
 #partner-content .partner .member {
-    border-radius: 100%;
     display: inline-block;
     height: 150px;
-    margin-bottom: 35px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -2319,17 +2317,17 @@ pre {
 
 #partner-content .partner .button-content {
     display: block;
-    margin-top: 35px;
+    /*margin-top: 35px;*/
 }
 
 #partner-content .partner a.more {
-    background: none repeat scroll 0 0 #0C4360;
+   /* background: none repeat scroll 0 0 #0C4360;
     border-radius: 10px;
     bottom: 0;
     color: #fff;
     font-size: 18px;
     font-weight: 700;
-    padding: 5px 10px;
+    padding: 5px 10px;*/
 }
 
 img.left-circle {
@@ -2747,7 +2745,7 @@ img.right-circle {
 	padding: 10px;
 }
 .col-sm-6{
-  margin-bottom: 50px;
+ /* margin-bottom: 50px;*/
 }
 
 @media (max-width: 1200px) {
