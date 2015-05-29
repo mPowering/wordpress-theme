@@ -195,7 +195,7 @@ $total_sliders = count($sliders);
     <span class="circle-title">PARTNERS</span>
         <div class="slider1">
                 <?php
-                $queryObject = new WP_Query( 'post_type=partner&posts_per_page=-1' );
+                $queryObject = new WP_Query( 'post_type=partner&posts_per_page=-1&orderby=date&order=DESC' );
                 // The Loop!
                 if ($queryObject->have_posts()) {
                     ?>
