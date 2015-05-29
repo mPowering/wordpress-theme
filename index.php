@@ -47,8 +47,9 @@ if ( is_active_sidebar( 'sidebar' ) ) {
     </div>
     <?php } else { ?>
     <div class="entry-content">
-        <?php echo '<p>' . wp_trim_words( get_the_content(), 50 ) . '</p>'; ?>
-        <a class="more" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">READ MORE</a>
+        <?php echo '<p>' . wp_trim_words( get_the_content(), 50 ); ?>
+        <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">[more]</a>
+         <?php echo '</p>'; ?>
     </div>
     <?php } //.entry-content ?>
 
@@ -76,7 +77,7 @@ if ( is_active_sidebar( 'sidebar' ) ) {
         <div class="sidebar-inner">
             <aside class="widget-area">
 
-    <p class="buble-title">Latest <span>Blogs</span></p>
+    <p class="buble-title">Latest Posts</p>
      <ul class="latest-blogs">
     <?php $the_query = new WP_Query( 'showposts=10' ); ?>
 

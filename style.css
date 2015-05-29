@@ -2239,7 +2239,7 @@ pre {
     bottom: 0;
     color: #fff;
     font-size: 18px;
-    font-weight: 700;
+    /*font-weight: 700;*/
     left: 50%;
     margin-left: -60px;
     padding: 5px 10px;
@@ -2320,16 +2320,6 @@ pre {
     /*margin-top: 35px;*/
 }
 
-#partner-content .partner a.more {
-   /* background: none repeat scroll 0 0 #0C4360;
-    border-radius: 10px;
-    bottom: 0;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 5px 10px;*/
-}
-
 img.left-circle {
     bottom: 0;
     left: 0;
@@ -2348,11 +2338,10 @@ img.right-circle {
     background: none repeat scroll 0 0 #ff455a;
     border-radius: 100%;
     color: #fff;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
     height: 138px;
     margin: auto;
-    padding-top: 35px;
+    padding-top: 30px;
     text-align: center;
     width: 138px;
 }

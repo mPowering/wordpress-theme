@@ -2,7 +2,7 @@
         <div class="sidebar-inner">
             <aside class="widget-area">
 
-    <p class="buble-title">Latest <span>Blogs</span></p>
+    <p class="buble-title">Latest Posts</p>
      <ul class="latest-blogs">
     <?php $the_query = new WP_Query( 'showposts=10' ); ?>
 
