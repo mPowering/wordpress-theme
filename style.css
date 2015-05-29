@@ -2796,3 +2796,7 @@ body{
 .menu-item .collapse {
   display: block;
 }
+
+.team h2 {
+	margin-top:-4px;
+}
