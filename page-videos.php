@@ -52,7 +52,6 @@ get_header(); ?>
         <div class="sidebar-inner">
             <aside class="widget-area">
 
-    <p class="buble-title-r">Resources</p>
         <ul class="latest-resources">
             <li><a href="<?php echo get_bloginfo('url') ?>/resources/reports" title="Reports and Documents"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_reports.png"><span>Reports and Documents</span></a></li>
             <li class="active"><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video.png"><span>Videos</span></a></li>

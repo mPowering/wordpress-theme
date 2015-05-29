@@ -2415,6 +2415,10 @@ img.right-circle {
     font-weight: 300;
 }
 
+#sidebar .latest-resources {
+    margin-top: 20px;
+}
+
 #sidebar .latest-resources li a img {
     display: inline;
     margin-right: 10px;
@@ -2474,6 +2478,7 @@ img.right-circle {
 
 #resources-content .box-resource h2 {
     color: #f0475a;
+    margin-bottom: 20px;
 }
 
 #resources-content .box-resource h2 a img {

@@ -35,6 +35,7 @@ get_header(); ?>
                         <div class="col-sm-12 external">
                             <div class="col-sm-12 nopadding" style="margin-bottom: 15px;float: left;"><div class="col-sm-3 nopadding"><a href="<?php the_field('file'); ?>"><img alt="" src="<?php the_field('icon'); ?>"></a></div></div>
                             <div class="col-sm-12 nopadding"><h3><a href="<?php the_field('file'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                            <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
                             <span><?php echo get_the_date('d F y'); ?></span></div>
                         </div>
                   <?php
@@ -49,7 +50,6 @@ get_header(); ?>
         <div class="sidebar-inner">
             <aside class="widget-area">
 
-    <p class="buble-title-r">Resources</p>
         <ul class="latest-resources">
             <li class="active"><a href="<?php echo get_bloginfo('url') ?>/resources/reports" title="Reports and Documents"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_reports.png"><span>Reports and Documents</span></a></li>
             <li><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video.png"><span>Videos</span></a></li>
