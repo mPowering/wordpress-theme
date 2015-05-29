@@ -14,7 +14,7 @@
       echo'<section id="title" class="emerald-home"><div class="container"><div class="row"><div class="col-sm-12"><p>'.$sub_title.'</p></div></div></div></section>';
     }
    ?>
-    <section id="contact-us">
+    <section id="contact-us" class="white-box">
         <div class="container">
             <div class="row">
                 <div id="content" class="site-content col-md-12>" role="main">
