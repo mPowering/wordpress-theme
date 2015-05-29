@@ -52,7 +52,7 @@ get_header(); ?>
                     <li><a href="<?php echo get_bloginfo('url') ?>/resources/press-releases" title="Press Releases"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_press.png"><span>Press Releases</span></a></li>
                     <li><a href="<?php echo get_bloginfo('url') ?>/resources/reports" title="Reports and Documents"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_reports.png"><span>Reports and Documents</span></a></li>
                     <li><a href="<?php echo get_bloginfo('url') ?>/resources/links" title="External Links"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_external.png"><span>External Links</span></a></li>
-                    <li><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video.png"><span>Videos</span></a></li>
+                    <li><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video2.png"><span>Videos</span></a></li>
                     <li><a href="<?php echo get_bloginfo('url') ?>/resources/calendar" title="Calendar"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_calendar.png"><span>Calendar</span></a></li>
                     <li class="active"><a href="<?php echo get_bloginfo('url') ?>/resources/map" title="Map"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_map.png"><span>Map</span></a></li>
                   </ul>

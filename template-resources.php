@@ -45,7 +45,7 @@ get_header(); ?>
           </div>
 
           <div class="box-resource">
-            <h2><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video.png"><span>Videos</span></a></h2>
+            <h2><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video2.png"><span>Videos</span></a></h2>
               <?php
               $queryObject = new WP_Query( 'post_type=videos&posts_per_page=2&orderby=date&order=DESC' );
               // The Loop!
@@ -103,7 +103,7 @@ get_header(); ?>
 
         <ul class="latest-resources">
             <li><a href="<?php echo get_bloginfo('url') ?>/resources/reports" title="Reports and Documents"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_reports.png"><span>Reports and Documents</span></a></li>
-            <li><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video.png"><span>Videos</span></a></li>
+            <li><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video2.png"><span>Videos</span></a></li>
             <li><a href="<?php echo get_bloginfo('url') ?>/resources/links" title="External Links"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_external.png"><span>External Links</span></a></li>
         </ul>
     <br> <?php dynamic_sidebar( 'sidebar' ); ?>
