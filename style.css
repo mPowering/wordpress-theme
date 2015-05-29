@@ -1974,15 +1974,10 @@ ul#menu-company-menu li:before{
 }
 #resources-blog .latest-resource .more-link {
     display: block;
-    margin-top: 40px;
     text-align: center;
 }
 #resources-blog .latest-resource .more-link a {
-    background: none repeat scroll 0 0 #0c4360;
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 700;
-    padding: 10px 15px;
+	color: #f0475a;
 }
 #resources-blog .buble-title {
     background: none repeat scroll 0 0 #ff455a;
@@ -2081,10 +2076,7 @@ ul#menu-company-menu li:before{
 #resources-video .header-video h2 {
     color: #0c415f;
     float: left;
-    font-size: 18px;
-    font-weight: 500;
-    margin-right: 5px;
-    margin-top: 10px;
+    margin-top: 0;
 }
 #resources-video .header-video h2 a {
     color: #0c415f;
@@ -2111,9 +2103,6 @@ ul#menu-company-menu li:before{
 
 #resources-video .header-video p {
     clear: both;
-    color: #111111;
-    font-size: 13px;
-    font-weight: 300;
 }
 
 #resources-video .header-video .separator {

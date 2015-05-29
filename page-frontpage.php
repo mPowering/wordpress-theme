@@ -5,48 +5,6 @@
 get_header();
 ?>
 
-<?php /*
-<section id="main-slider-wrapper">
-    <div id="main-slider" class="carousel wet-asphalt">
-        <?php
-        $args = array( 'post_type'=>'zee_slider', 'orderby' => 'menu_order','order' => 'ASC' );
-        $sliders = get_posts( $args );
-        ?>
-        <ol class="carousel-indicators">
-            <?php foreach ($sliders as $key => $value) { ?>
-            <li data-target="#main-slider" data-slide-to="<?php echo $key; ?>" class="<?php echo ($key==0) ? 'active' : ''; ?>"></li>
-            <?php } ?>
-        </ol><!--/.carousel-indicators-->
-        <div class="carousel-inner">
-            <?php foreach ($sliders as $key => $value) { ?>
-            <div class="item<?php echo ($key==0) ? ' active' : ''; ?>">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="carousel-content">
-                                <h2><?php echo $value->post_title; ?></h2>
-                                <p class="lead"><?php echo $value->post_content; ?></p>
-                                <a class="btn btn-md btn-danger" href="#"><?php _e( 'Read More', ZEETEXTDOMAIN ); ?></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 hidden-xs">
-                            <div class="carousel-image">
-                                <?php 
-                                $full_img = wp_get_attachment_image_src( get_post_thumbnail_id($value->ID), 'full');
-                                $img_src= $full_img[0];
-                                ?>
-                                <img class="img-responsive pull-right" src="<?php echo $img_src; ?>" alt="<?php echo $value->post_title; ?>" />
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-            </div>
-            <?php } ?>
-        </div><!--/.carousel-inner-->
-    </div><!--/.carousel-->
-</section>
-*/
-?>
 <?php
 $args = array( 'post_type'=>'zee_slider', 'orderby' => 'menu_order','order' => 'ASC' );
 $sliders = get_posts( $args );
@@ -150,47 +108,6 @@ $total_sliders = count($sliders);
                     </div>
                 </div><!--/.item-->
 
-<!-- 
-
-                <div class="item" style="background-image: url(http://shapebootstrap.net/demo/flat_theme/images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content center centered" style="margin-top: 209px;">
-                                    <h2 class="boxed animation animated-item-1">Clean, Crisp, Powerful and Responsie Web Design Theme</h2>
-                                    <p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                                    <br>
-                                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item" style="background-image: url(http://shapebootstrap.net/demo/flat_theme/images/slider/bg3.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            
-                            <div class="col-sm-6">
-                                <div class="carousel-content centered" style="margin-top: 219.5px;">
-                                    <h2 class="animation animated-item-1">Powerful and Responsive Web Design Theme</h2>
-                                    <p class="animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
-                                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="centered" style="margin-top: 129px;">
-                                    <div class="embed-container">
-                                        <iframe src="//player.vimeo.com/video/69421653?title=0&amp;byline=0&amp;portrait=0&amp;color=a22c2f" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div> -->
-
 
                 <?php } // endforeach ?>
 
@@ -231,10 +148,10 @@ $total_sliders = count($sliders);
     <div class="container">
     <div class="row">
     <div class="col-sm-6">
-        <p class="star-title">Latest Resources</p>
+        <p class="star-title">Latest Resource</p>
             <div class="latest-resource">
                 <?php
-                $queryObject = new WP_Query( 'post_type=press-releases&posts_per_page=1' );
+                $queryObject = new WP_Query( 'post_type=reports&posts_per_page=1&orderby=date&order=DESC' );
                 // The Loop!
                 if ($queryObject->have_posts()) {
                     ?>
@@ -244,7 +161,7 @@ $total_sliders = count($sliders);
                         ?>
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
-                        <span class="more-link"><a href="<?php the_permalink(); ?>">READ MORE</a></span>
+                        <span class="more-link"><a href="<?php the_permalink(); ?>">[ More ]</a></span>
                     <?php
                     }
                     ?>
@@ -254,7 +171,7 @@ $total_sliders = count($sliders);
         </div>
     </div>
     <div class="col-sm-6">
-        <p class="star-title">Latest Blogs</p>
+        <p class="star-title">Latest Posts</p>
      <ul class="latest-blogs">
     <?php $the_query = new WP_Query( 'showposts=4' ); ?>
 
@@ -330,13 +247,9 @@ $total_sliders = count($sliders);
                     while ($queryObject->have_posts()) {
                         $queryObject->the_post();
                         ?>
-                        <div class="col-md-2 nopadding"><span class="star-title">Video</span></div>
+                        <div class="col-md-2 nopadding"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video2.png" style="display: inline-block;"></div>
                         <div class="header-video col-sm-10">
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <span class="separator"></span>
-                            <span class="date-video visible-lg"><?php echo get_the_date('d M y'); ?></span>
-                            <span class="separator visible-lg"></span>
-                            <span class="more-link"><a href="<?php the_permalink(); ?>">READ MORE</a></span>
+                            <h2><?php the_title(); ?></h2>
                             <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
                         </div>
                         <iframe width="480" height="360" src="https://www.youtube.com/embed/<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen></iframe>
