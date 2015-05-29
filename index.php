@@ -16,10 +16,6 @@ if ( is_active_sidebar( 'sidebar' ) ) {
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
 
-        <div class="entry-thumbnail">
-            <?php the_post_thumbnail(); ?>
-        </div>
-
         <?php if ( is_single() ) { ?>
         <h1 class="entry-title">
             <?php the_title(); ?>
@@ -34,9 +30,13 @@ if ( is_active_sidebar( 'sidebar' ) ) {
             <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
             <?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
             <sup class="featured-post"><?php _e( 'Sticky', ZEETEXTDOMAIN ) ?></sup>
+            
+            
+            
             <?php } ?>
             <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
         </h2>
+        
         <?php } //.entry-title ?>
 
     </header><!--/.entry-header -->
@@ -46,11 +46,16 @@ if ( is_active_sidebar( 'sidebar' ) ) {
         <?php the_excerpt(); ?>
     </div>
     <?php } else { ?>
-    <div class="entry-content">
+    
+    <div class="entry-content" >
+    	<div class="entry-thumbnail">
+            	<?php the_post_thumbnail(); ?>
+        	</div>
         <?php echo '<p>' . wp_trim_words( get_the_content(), 50 ); ?>
         <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">[more]</a>
          <?php echo '</p>'; ?>
     </div>
+    <div style="clear:both;"></div>
     <?php } //.entry-content ?>
 
     <footer>
@@ -77,7 +82,7 @@ if ( is_active_sidebar( 'sidebar' ) ) {
         <div class="sidebar-inner">
             <aside class="widget-area">
 
-    <p class="buble-title">Latest Posts</p>
+    <p class="buble-title">Latest<br/>Posts</p>
      <ul class="latest-blogs">
     <?php $the_query = new WP_Query( 'showposts=10' ); ?>
 

@@ -1425,12 +1425,13 @@ article.attachment {
 }
 .post .entry-thumbnail,
 article.attachment .entry-thumbnail {
-  margin: -20px -20px 20px;
+  margin: 0 20px 20px 0;
 }
 .post .entry-thumbnail img,
 article.attachment .entry-thumbnail img {
-  width: 100%;
-  border-radius: 5px 5px 0 0;
+  max-width: 150px;
+  float:left;
+  margin: 0 20px 20px 0;
 }
 .post h2.entry-title,
 article.attachment h2.entry-title {

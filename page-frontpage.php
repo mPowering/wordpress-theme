@@ -148,7 +148,7 @@ $total_sliders = count($sliders);
     <div class="container">
     <div class="row">
     <div class="col-sm-6">
-        <p class="star-title">Latest Resource</p>
+        <p class="star-title">Latest<br/>Resource</p>
             <div class="latest-resource">
                 <?php
                 $queryObject = new WP_Query( 'post_type=reports&posts_per_page=1&orderby=date&order=DESC' );
@@ -170,7 +170,7 @@ $total_sliders = count($sliders);
         </div>
     </div>
     <div class="col-sm-6">
-        <p class="star-title">Latest Posts</p>
+        <p class="star-title">Latest<br/>Posts</p>
      <ul class="latest-blogs">
     <?php $the_query = new WP_Query( 'showposts=4' ); ?>
 

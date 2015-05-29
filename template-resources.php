@@ -21,7 +21,7 @@ get_header(); ?>
     <div class="row">
     <div class="col-sm-8">
         <div class="box-resource">
-            <h2><a href="<?php echo get_bloginfo('url') ?>/resources/reports" title="Reports and Documents"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_reports.png"><span>Reports and Documents</span></a></h2>
+            <h2 style="color:#"><a href="<?php echo get_bloginfo('url') ?>/resources/reports" title="Reports and Documents"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_reports.png"><span>Reports and Documents</span></a></h2>
               <?php
               $queryObject = new WP_Query( 'post_type=reports&posts_per_page=4&orderby=date&order=DESC' );
               // The Loop!
@@ -34,6 +34,7 @@ get_header(); ?>
                         <div class="col-sm-6 external">
                             <div class="col-sm-12 nopadding" style="margin-bottom: 15px;"><div class="col-sm-7 nopadding"><a href="<?php the_field('file'); ?>"><img alt="" src="<?php the_field('icon'); ?>"></a></div></div>
                             <div class="col-sm-12 nopadding"><h3><a href="<?php the_field('file'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                            <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
                             <span><?php echo get_the_date('d F y'); ?></span></div>
                         </div>
                   <?php
