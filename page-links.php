@@ -35,11 +35,18 @@ get_header(); ?>
                       ?>
                         <li style="margin-bottom: 30px;">
                             <h3 style="margin-bottom: 10px;"><i class="icon-angle-right"></i>  <a href="<?php the_field('link'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-                            <div class="entry-thumbnail">
-            					<?php the_post_thumbnail(); ?>
-        					</div>
+                            
+                            <?php  if (has_post_thumbnail()){
+                            		echo '<div class="entry-thumbnail">';
+                            		the_post_thumbnail();
+            						echo "<div class='caption'>";
+            						echo get_post(get_post_thumbnail_id())->post_excerpt; 
+            						echo "</div>";
+        							echo '</div>';
+        						} ?>
         					<?php echo get_the_content(); ?>
                             <span>[<?php echo get_the_date('d F y'); ?>]</span>
+                            <div style="clear:both;"></div>
                         </li>
                   <?php
                   }
