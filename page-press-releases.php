@@ -64,6 +64,7 @@ get_header(); ?>
                     <li><a href="<?php echo get_bloginfo('url') ?>/resources/videos" title="Videos"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_video2.png"><span>Videos</span></a></li>
                     <li><a href="<?php echo get_bloginfo('url') ?>/resources/calendar" title="Calendar"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_calendar.png"><span>Calendar</span></a></li>
                     <li><a href="<?php echo get_bloginfo('url') ?>/resources/map" title="Map"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_map.png"><span>Map</span></a></li>
+                    <li><a href="http://health-orb.org" title="ORB Platform"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ORB-for-website.png"><span>ORB Platform</span></a></li>
                   </ul>
             </aside>
         </div>
