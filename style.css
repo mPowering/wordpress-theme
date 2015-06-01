@@ -1431,8 +1431,16 @@ article.attachment .entry-thumbnail {
 article.attachment .entry-thumbnail img {
   max-width: 150px;
   float:left;
-  margin: 0 20px 20px 0;
+  margin: 5px 20px 10px 0;
 }
+
+.entry-thumbnail img,
+article.attachment .entry-thumbnail img {
+  max-width: 150px;
+  float:left;
+  margin: 5px 20px 10px 0;
+}
+
 .post h2.entry-title,
 article.attachment h2.entry-title {
   margin-top: 0;

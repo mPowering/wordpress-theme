@@ -34,9 +34,12 @@ get_header(); ?>
                       $queryObject->the_post();
                       ?>
                         <li style="margin-bottom: 20px;">
-                            <h3 style="margin-bottom: 0;"><i class="icon-angle-right"></i>  <a href="<?php the_field('link'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-                            <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
-                            <span><?php echo get_the_date('d F y'); ?></span>
+                            <h3 style="margin-bottom: 10px;"><i class="icon-angle-right"></i>  <a href="<?php the_field('link'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="entry-thumbnail">
+            					<?php the_post_thumbnail(); ?>
+        					</div>
+        					<?php echo get_the_content(); ?>
+                            <span>[<?php echo get_the_date('d F y'); ?>]</span>
                         </li>
                   <?php
                   }
