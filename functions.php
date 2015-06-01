@@ -241,7 +241,7 @@ $args = array(
 					 	'not_found_in_trash'  => 'No External Links found in trash.'
 					),
 	'show_in_menu'  =>	'edit.php?post_type=reports', // This is where we tell WordPress to add 'Locations' as a submenu
-    'supports' => array('title'),
+    'supports' => array('title', 'editor'),
     'publicly_queryable' => true,
     'exclude_from_search' => false,
     'has_archive' => true,
