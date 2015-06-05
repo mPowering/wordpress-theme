@@ -57,7 +57,7 @@ get_header(); ?>
                       $queryObject->the_post();
                       ?>
                         <div class="col-sm-7">
-                            <iframe width="350" height="260" src="https://www.youtube.com/embed/<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="350" height="260" src="<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="col-sm-5">
                             <h3><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>

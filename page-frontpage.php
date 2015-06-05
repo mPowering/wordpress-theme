@@ -251,7 +251,7 @@ $total_sliders = count($sliders);
                             <h2><?php the_title(); ?></h2>
                             <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
                         </div>
-                        <iframe width="480" height="360" src="https://www.youtube.com/embed/<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="480" height="360" src="<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen></iframe>
                     <?php
                     }
                     ?>

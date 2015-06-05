@@ -33,12 +33,12 @@ get_header(); ?>
                       $queryObject->the_post();
                       ?>
                         <div class="col-sm-12">
-                            <h3><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                            <h3><?php the_title(); ?></h3>
                             <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
                             <span><?php echo get_the_date('d F y'); ?></span>
                         </div>
-                        <div class="col-sm-12">
-                            <iframe width="620" height="350" src="https://www.youtube.com/embed/<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen></iframe>
+                        <div class="col-sm-12" style="margin-bottom: 30px;">
+                            <iframe width="620" height="350" src="<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen></iframe>
                         </div>
                   <?php
                   }
