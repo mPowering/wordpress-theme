@@ -31,11 +31,22 @@ get_header(); ?>
                   while ($queryObject->have_posts()) {
                       $queryObject->the_post();
                       ?>
-                        <div class="col-sm-6 external">
-                            <div class="col-sm-12 nopadding" style="margin-bottom: 15px;"><div class="col-sm-7 nopadding"><a href="<?php the_field('file'); ?>"><img alt="" src="<?php the_field('icon'); ?>"></a></div></div>
-                            <div class="col-sm-12 nopadding"><h3><a href="<?php the_field('file'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-                            <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
-                            <span><?php echo get_the_date('d F y'); ?></span></div>
+                        <div class="col-sm-12 blog" style="margin-bottom: 25px; padding-bottom: 25px;">
+                        <div class="col-sm-12 nopadding" style="margin-bottom: 15px;"><div class="col-sm-3 nopadding"><a href="<?php the_field('file'); ?>"><img alt="" src="<?php the_field('icon'); ?>"></a></div></div>
+                        <h2 class="entry-title">
+                            <div class="date-post">
+                            <span class="day-post"><?php echo get_the_date('d'); ?></span>
+                            <span class="month-post"><?php echo get_the_date('M'); ?></span>
+                            </div>
+                            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+                            <?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
+                            <sup class="featured-post"><?php _e( 'Sticky', ZEETEXTDOMAIN ) ?></sup>
+
+
+
+                            <?php } ?>
+                            <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
+                        </h2>
                         </div>
                   <?php
                   }
@@ -56,13 +67,31 @@ get_header(); ?>
                   while ($queryObject->have_posts()) {
                       $queryObject->the_post();
                       ?>
-                        <div class="col-sm-7">
-                            <iframe width="350" height="260" src="<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen></iframe>
+
+                        <div class="col-sm-12 blog" style="margin-bottom: 25px; padding-bottom: 25px;">
+                        <h2 class="entry-title">
+                            <div class="date-post">
+                            <span class="day-post"><?php echo get_the_date('d'); ?></span>
+                            <span class="month-post"><?php echo get_the_date('M'); ?></span>
+                            </div>
+                            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+                            <?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
+                            <sup class="featured-post"><?php _e( 'Sticky', ZEETEXTDOMAIN ) ?></sup>
+
+
+
+                            <?php } ?>
+                            <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
+                        </h2>
+                        <div class="entry-content" >
+                        	<div class="entry-thumbnail">
+                                	<?php the_post_thumbnail(); ?>
+                            	</div>
+                            <?php echo '<p>' . wp_trim_words( get_the_content(), 50 ); ?>
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">[more]</a>
+                             <?php echo '</p>'; ?>
                         </div>
-                        <div class="col-sm-5">
-                            <h3><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-                            <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
-                            <span><?php echo get_the_date('d F y'); ?></span>
+                            <iframe height="260" src="<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen style="width: 100%;"></iframe>
                         </div>
                   <?php
                   }
@@ -74,7 +103,6 @@ get_header(); ?>
 
         <div class="box-resource">
             <h2><a href="<?php echo get_bloginfo('url') ?>/resources/links" title="External Links"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/ico_external.png"><span>External Links</span></a></h2>
-              <ul>
               <?php
               $queryObject = new WP_Query( 'post_type=links&posts_per_page=3&orderby=date&order=DESC' );
               // The Loop!
@@ -84,18 +112,36 @@ get_header(); ?>
                   while ($queryObject->have_posts()) {
                       $queryObject->the_post();
                       ?>
-                        <li style="margin-bottom: 20px;">
-                            <h3 style="margin-bottom: 0;"><i class="icon-angle-right"></i>  <a href="<?php the_field('link'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-                            <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
-                            <span><?php echo get_the_date('d F y'); ?></span>
-                        </li>
+                        <div class="col-sm-12 blog" style="margin-bottom: 25px; padding-bottom: 25px;">
+                        <h2 class="entry-title">
+                            <div class="date-post">
+                            <span class="day-post"><?php echo get_the_date('d'); ?></span>
+                            <span class="month-post"><?php echo get_the_date('M'); ?></span>
+                            </div>
+                            <a href="<?php the_field('link'); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                            <?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
+                            <sup class="featured-post"><?php _e( 'Sticky', ZEETEXTDOMAIN ) ?></sup>
+
+
+
+                            <?php } ?>
+                            <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
+                        </h2>
+                        <div class="entry-content" >
+                        	<div class="entry-thumbnail">
+                                	<?php the_post_thumbnail(); ?>
+                            	</div>
+                            <?php echo '<p>' . wp_trim_words( get_the_content(), 50 ); ?>
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"></a>
+                             <?php echo '</p>'; ?>
+                        </div>
+                        </div>
                   <?php
                   }
                   ?>
                   <?php
               }
               ?>
-              </ul>
           </div>
     </div>
     <div id="sidebar" class="col-md-4" role="complementary">

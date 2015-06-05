@@ -267,11 +267,6 @@ a:focus {
 }
 /* =WordPress Core
 -------------------------------------------------------------- */
-
-.sticky{}
-
-.bypostauthor{}
-
 .alignnone {
   margin: 10px 0 20px;
 }
@@ -1714,9 +1709,6 @@ code{
 .widget-area ul li{
     padding: 5px 0;
 }
-.widget-area .tagcloud{
-
-}
 
 /*search*/
 .widget-area #searchform{
@@ -1906,9 +1898,6 @@ background-color: #ECF0F1;
     border-top:0;
     box-shadow:none;
 }
-.navbar-inverse .navbar-nav li{
-
-}
 .navbar-inverse .navbar-nav>li a{
     color: #0c4260;
     display: block;
@@ -1963,9 +1952,6 @@ ul#menu-company-menu li:before{
     display: block;
     font-size: 16px;
     text-transform: uppercase;
-}
-#resources-blog .latest-resource {
-
 }
 #resources-blog .latest-resource h2 {
     color: #0c4360;
@@ -2079,9 +2065,6 @@ ul#menu-company-menu li:before{
     padding-top: 25px;
     text-align: center;
     width: 80px;
-}
-#resources-video .header-video {
-
 }
 #resources-video .header-video h2 {
     color: #0c415f;
@@ -2254,22 +2237,11 @@ pre {
 #team-content .team .member {
     border: 2px solid #999;
     height: 200px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
     width: 200px;
-}
-
-#team-content .team .member img {
-
-}
-
-#team-content .team h2 {
-
-}
-
-#team-content .team p {
-
 }
 
 #team-content .team a {
@@ -2489,10 +2461,6 @@ img.right-circle {
   margin-top: 0;
 }
 
-#resources-content .box-resource ul {
-
-}
-
 .page-template-page-press-releases #resources-content .box-resource ul li {
     display: inline-block;
     margin-bottom: 35px;
@@ -2500,14 +2468,6 @@ img.right-circle {
 
 #resources-content .box-resource ul li {
     display: block;
-}
-
-#resources-content .box-resource ul li i {
-
-}
-
-#resources-content .box-resource ul li a {
-
 }
 
 #resources-content .box-resource .date-post {
@@ -2737,9 +2697,6 @@ img.right-circle {
 	font-size: .85em;
 	padding: 10px;
 }
-.col-sm-6{
- /* margin-bottom: 50px;*/
-}
 
 @media (max-width: 1200px) {
 .navbar .navbar-main > li {
@@ -2803,6 +2760,10 @@ body{
 #home-content .wpcf7-form .wpcf7-text {
     width: 70%;
 }
+#resources-content .box-resource h2{
+  font-size: 20px;
+}
+
 }
 .menu-item .collapse {
   display: block;

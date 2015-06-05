@@ -818,44 +818,6 @@ function zee_the_attached_image() {
 }
 }
 
-function register_cpt_teams() {
-
-    $labels = array(
-        'name' => _x( 'Teams', 'team' ),
-        'singular_name' => _x( 'Team', 'team' ),
-        'edit_item' => _x( 'Editar Team', 'team' ),
-        'view_item' => _x( 'Ver Team', 'team' ),
-        'search_items' => _x( 'Buscar Teams', 'team' ),
-        'not_found' => _x( 'No se encontraron Teams', 'team' ),
-        'not_found_in_trash' => _x( 'No hay Teams en la papelera', 'team' ),
-        'parent_item_colon' => _x( 'Padre Team:', 'team' ),
-        'menu_name' => _x( 'Teams', 'team' ),
-    );
-
-    $args = array(
-        'labels' => $labels,
-        'hierarchical' => true,
-        'description' => 'Gestionar Teams',
-        'supports' => array( 'title', 'editor', 'thumbnail'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 25,
-        'show_in_nav_menus' => false,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'rewrite' => true,
-        'capability_type' => 'post'
-    );
-
-    register_post_type( 'team', $args );
-}
-
-add_action( 'init', 'register_cpt_teams' );
-
     // Post type: Sliders
 add_action('init', function(){
 
@@ -1035,3 +997,41 @@ function register_cpt_partners() {
 }
 
 add_action( 'init', 'register_cpt_partners' );
+
+function register_cpt_teams() {
+
+    $labels = array(
+        'name' => _x( 'Teams', 'team' ),
+        'singular_name' => _x( 'Team', 'team' ),
+        'edit_item' => _x( 'Editar Team', 'team' ),
+        'view_item' => _x( 'Ver Team', 'team' ),
+        'search_items' => _x( 'Buscar Teams', 'team' ),
+        'not_found' => _x( 'No se encontraron Teams', 'team' ),
+        'not_found_in_trash' => _x( 'No hay Teams en la papelera', 'team' ),
+        'parent_item_colon' => _x( 'Padre Team:', 'team' ),
+        'menu_name' => _x( 'Teams', 'team' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'description' => 'Gestionar Teams',
+        'supports' => array( 'title', 'editor', 'thumbnail'),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 25,
+        'show_in_nav_menus' => false,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => false,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+
+    register_post_type( 'team', $args );
+}
+
+add_action( 'init', 'register_cpt_teams' );
