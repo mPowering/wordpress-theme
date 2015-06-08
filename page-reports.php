@@ -39,7 +39,7 @@ get_header(); ?>
                             <span class="day-post"><?php echo get_the_date('d'); ?></span>
                             <span class="month-post"><?php echo get_the_date('M'); ?></span>
                             </div>
-                            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+                            <a href="<?php the_field('file'); ?>" rel="bookmark"><?php the_title(); ?></a>
                             <?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
                             <sup class="featured-post"><?php _e( 'Sticky', ZEETEXTDOMAIN ) ?></sup>
 
@@ -48,6 +48,7 @@ get_header(); ?>
                             <?php } ?>
                             <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
                         </h3>
+                        <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
                         </div>
                   <?php
                   }
