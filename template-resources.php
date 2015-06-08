@@ -33,7 +33,7 @@ get_header(); ?>
                       ?>
                         <div class="col-sm-12 blog" style="margin-bottom: 25px; padding-bottom: 25px;">
                         <div class="col-sm-12 nopadding" style="margin-bottom: 15px;"><div class="col-sm-3 nopadding"><a href="<?php the_field('file'); ?>"><img alt="" src="<?php the_field('icon'); ?>"></a></div></div>
-                        <h2 class="entry-title">
+                        <h3 class="entry-title">
                             <div class="date-post">
                             <span class="day-post"><?php echo get_the_date('d'); ?></span>
                             <span class="month-post"><?php echo get_the_date('M'); ?></span>
@@ -46,7 +46,7 @@ get_header(); ?>
 
                             <?php } ?>
                             <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
-                        </h2>
+                        </h3>
                         </div>
                   <?php
                   }
@@ -69,7 +69,7 @@ get_header(); ?>
                       ?>
 
                         <div class="col-sm-12 blog" style="margin-bottom: 25px; padding-bottom: 25px;">
-                        <h2 class="entry-title">
+                        <h3 class="entry-title">
                             <div class="date-post">
                             <span class="day-post"><?php echo get_the_date('d'); ?></span>
                             <span class="month-post"><?php echo get_the_date('M'); ?></span>
@@ -82,7 +82,7 @@ get_header(); ?>
 
                             <?php } ?>
                             <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
-                        </h2>
+                        </h3>
                         <div class="entry-content" >
                         	<div class="entry-thumbnail">
                                 	<?php the_post_thumbnail(); ?>
@@ -113,7 +113,7 @@ get_header(); ?>
                       $queryObject->the_post();
                       ?>
                         <div class="col-sm-12 blog" style="margin-bottom: 25px; padding-bottom: 25px;">
-                        <h2 class="entry-title">
+                        <h3 class="entry-title">
                             <div class="date-post">
                             <span class="day-post"><?php echo get_the_date('d'); ?></span>
                             <span class="month-post"><?php echo get_the_date('M'); ?></span>
@@ -126,7 +126,7 @@ get_header(); ?>
 
                             <?php } ?>
                             <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
-                        </h2>
+                        </h3>
                         <div class="entry-content" >
                         	<div class="entry-thumbnail">
                                 	<?php the_post_thumbnail(); ?>
