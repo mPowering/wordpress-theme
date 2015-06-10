@@ -2732,6 +2732,12 @@ right: -80px;
     display: none;
 }
 }
+@media (max-width: 780px) {
+#mobile-menu {
+    max-height: 250px;
+    overflow: auto;
+}
+}
 @media (max-width: 640px) {
 body{
     padding-top: 65px;
@@ -2755,10 +2761,13 @@ body{
     font-size: 150%;
 }
 #home-content .wpcf7-form .wpcf7-text {
-    width: 70%;
+    width: 65%;
 }
 #resources-content .box-resource h2{
-  font-size: 20px;
+  font-size: 18px;
+}
+.page-template #resources-content {
+  background: none;
 }
 
 }

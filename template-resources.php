@@ -89,7 +89,7 @@ get_header(); ?>
                                 	<?php the_post_thumbnail(); ?>
                             	</div>
                             <?php echo '<p>' . wp_trim_words( get_the_content(), 50 ); ?>
-                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">[more]</a>
+                            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"></a>
                              <?php echo '</p>'; ?>
                         </div>
                             <iframe height="260" src="<?php the_field('video_id'); ?>" frameborder="0" allowfullscreen style="width: 100%;"></iframe>
