@@ -2723,6 +2723,12 @@ right: -80px;
 .bx-wrapper .bx-next{
     right: -95px;
 }
+.page-template #resources-content{
+    background: transparent url("images/line-blog.png") repeat-y scroll 58% top;
+}
+.widget-area ul li a {
+    font-size: 14px;
+}
 }
 @media (max-width: 800px) {
 .bx-wrapper .bx-prev{
@@ -2731,11 +2737,20 @@ right: -80px;
 .bx-wrapper .bx-next{
     display: none;
 }
+.page-template #resources-content{
+    background: transparent url("images/line-blog.png") repeat-y scroll 57% top;
+}
 }
 @media (max-width: 780px) {
 #mobile-menu {
     max-height: 250px;
     overflow: auto;
+}
+.page-template #resources-content{
+    background: #ffffff;
+}
+.widget-area ul li a {
+    font-size: 20px;
 }
 }
 @media (max-width: 640px) {
