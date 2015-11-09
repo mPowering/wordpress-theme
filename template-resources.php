@@ -47,7 +47,7 @@ get_header(); ?>
                             <?php } ?>
                             <?php edit_post_link( __( 'Edit', ZEETEXTDOMAIN ), '<small class="edit-link pull-right">', '</small>' ); ?>
                         </h3>
-                        <?php echo '<p>' . wp_trim_words( get_the_content(), 40 ) . '</p>'; ?>
+                        <?php echo '<p>' . get_the_content() . '</p>'; ?>
                         </div>
                   <?php
                   }
