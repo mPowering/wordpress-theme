@@ -30,7 +30,7 @@ get_header(); ?>
     <div class="row">
     <div class="col-sm-12">
                 <?php
-                $queryObject = new WP_Query( 'post_type=team&posts_per_page=4&orderby=date&order=DESC' );
+                $queryObject = new WP_Query( 'post_type=team&posts_per_page=10&orderby=date&order=DESC' );
                 // The Loop!
                 if ($queryObject->have_posts()) {
                     ?>
